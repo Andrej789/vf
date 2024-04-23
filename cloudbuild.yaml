@@ -4,6 +4,7 @@ steps:
     #!/usr/bin/env bash
     if [[ -z "$BRANCH_NAME" ]]; then
       echo "BRANCH_NAME is empty"
+      echo "... so we must break build execution."
       exit 1
     else
       echo "We are on branch: $BRANCH_NAME"
