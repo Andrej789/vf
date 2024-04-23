@@ -10,7 +10,5 @@ steps:
     fi
     
     echo "Your project ID is $PROJECT_ID"
-substitutions:
-  _BRANCH_NAME: NONE # Default value
 options:
   automapSubstitutions: true
