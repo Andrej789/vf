@@ -2,9 +2,15 @@ steps:
 - name: 'ubuntu'
   script: |
     #!/usr/bin/env bash
-    echo "Hello, you are on $BRANCH_NAME branch."
+    if [[ -z "$BRANCH_NAME" ]]; then
+      echo "BRANCH_NAME is empty"
+      exit 1
+    else
+      echo "We are on branch: $BRANCH_NAME"
+    fi
+    
     echo "Your project ID is $PROJECT_ID"
 substitutions:
-  BRANCH_NAME: NONE # Default value
+  _BRANCH_NAME: NONE # Default value
 options:
   automapSubstitutions: true
