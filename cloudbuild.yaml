@@ -4,5 +4,7 @@ steps:
     #!/usr/bin/env bash
     echo "Hello, you are on $BRANCH_NAME branch."
     echo "Your project ID is $PROJECT_ID"
+substitutions:
+  BRANCH_NAME: NONE # Default value
 options:
   automapSubstitutions: true
